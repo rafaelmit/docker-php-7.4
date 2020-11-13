@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 LABEL maintainer="Rafael Meira <rafaelmeira@me.com>"
 
@@ -52,7 +52,7 @@ RUN curl -s https://getcomposer.org/installer | php && mv composer.phar /usr/loc
 
 # INSTALL MSSQL
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
-    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list >/etc/apt/sources.list.d/mssql-release.list && \
+    curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list >/etc/apt/sources.list.d/mssql-release.list && \
     apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql17 && ACCEPT_EULA=Y apt-get install -y mssql-tools && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >>~/.bash_profile && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >>~/.bashrc && \
