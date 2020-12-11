@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Rafael Meira <rafaelmeira@me.com>"
+LABEL maintainer="Multilaser <equipe.web@multilaser.com.br>"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -16,6 +16,7 @@ RUN apt-get install -y \
     git \
     wget \
     vim \
+    cron \
     unzip \
     zip \
     libssl-dev \
