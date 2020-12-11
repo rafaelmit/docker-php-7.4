@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Multilaser <equipe.web@multilaser.com.br>"
+LABEL maintainer="Rafael Meira <rafaelmeira@me.com>"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
